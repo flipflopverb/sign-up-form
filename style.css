@@ -1,3 +1,8 @@
+@font-face {
+  font-family: RubikMonoOne;
+  src: url(./RubikMonoOne-Regular.ttf);
+}
+
 body {
   font-family: 'Courier New', Courier, monospace;
 
@@ -15,7 +20,6 @@ body div {
 .cardContainer {
   border-radius: 100px;
   width: 90vw;
-  max-width: 1000px;
   height: 600px;
   justify-content: center;
   align-items: center;
@@ -27,37 +31,86 @@ body div {
 
 .innerContainer {
   flex-direction: column;
+  align-items: center;
   justify-content: space-around;
-  background: linear-gradient(
-    180deg,
-    rgba(145, 245, 210, 1) 20%,
-    rgba(248, 195, 255, 0) 50%,
-    rgba(145, 245, 210, 1) 80%
-  );
-  width: 50vw;
+  background-color: rgba(145, 245, 210, 1);
+  width: 400px;
   max-width: 600px;
   height: 600px;
+  padding: 1vh;
+}
+
+.logo {
+  font-family: 'RubikMonoOne';
+  position: absolute;
+  left: 10vw;
+  width: 200px;
+}
+
+.innerContainer div {
 }
 
 .formArea {
-  justify-content: space-around;
+  max-height: 400px;
 }
 
 .row {
   flex-direction: row;
+  margin: 2vw;
 }
 
 .userInput {
   flex-direction: column;
+
+  justify-content: space-between;
+  align-items: left;
 }
 
 .introParagraphs {
   font-weight: 1;
+  margin: 2vw;
 }
 
 .submitArea {
+  justify-content: center;
 }
 
-.myclass {
-  font-size: 100px;
+button {
+  font-family: 'Courier New', Courier, monospace;
+  border: none;
+  width: 100px;
+  height: 50px;
+  opacity: 0.3;
+}
+
+button:hover {
+  background-color: white;
+  opacity: 0.8;
+}
+
+input {
+  font-family: 'Courier New', Courier, monospace;
+  border-style: none;
+  height: 3vh;
+  background-color: white;
+  opacity: 0.3;
+}
+
+input:hover {
+  opacity: 0.55;
+}
+
+input:focus {
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+  border-style: none;
+  outline-offset: 0;
+  max-height: 3vh;
+  border-bottom: 3px dashed white;
+  background-color: white;
+  opacity: 0.8;
+}
+
+.field {
+  width: 150px;
 }
