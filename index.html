@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=RubikMonoOne"
-    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -23,7 +19,7 @@
           must be submitted. Submit the form...|
         </div>
         <div class="formArea">
-          <form action="" method="post">
+          <form id="form" action="" method="post">
             <div class="row">
               <div class="userInput">
                 <label for="firstName">First Name*</label>
@@ -32,7 +28,6 @@
                   name="firstName"
                   id="firstName"
                   class="field"
-                  required
                 />
               </div>
               <div class="userInput">
@@ -42,7 +37,6 @@
                   name="lastName"
                   id="lastName"
                   class="field"
-                  required
                 />
               </div>
             </div>
@@ -55,18 +49,16 @@
                   id="email"
                   class="field"
                   placeholder="email@domain.dumb"
-                  required
                 />
               </div>
               <div class="userInput">
                 <label for="phone">Phone*</label
                 ><input
-                  type="number"
                   name="phone"
                   id="phone"
                   class="field"
-                  pattern="(d{3}[-]d{3}[-]d{4}?)"
-                  required
+                  placeholder="555-555-5555"
+                  pattern="(\d{3}([\-])?\d{3}([\-])?\d{4})"
                 />
               </div>
             </div>
@@ -92,10 +84,17 @@
                 />
               </div>
             </div>
+            <div class="submitArea">
+              <button
+                type="submit"
+                onclick="checkPasswords()"
+                class="submitButton"
+              >
+                Submit The Form
+              </button>
+              <button type="reset" class="resetButton">Reset</button>
+            </div>
           </form>
-        </div>
-        <div class="submitArea">
-          <button type="submit" class="submitButton">Submit The Form</button>
         </div>
       </div>
     </div>
