@@ -1,6 +1,6 @@
-function checkPasswords() {
-  const passA = document.getElementById('password').value;
-  const passB = document.getElementById('confirmPassword').value;
+function checkPasswords(event) {
+  var passA = document.getElementById('password').value;
+  var passB = document.getElementById('confirmPassword').value;
   /*  alert('you pushed submit'); */
   if (passA == passB) {
     alert('match ' + passA + ' ' + passB);
@@ -8,6 +8,7 @@ function checkPasswords() {
     passB.className('valid');
     return true;
   } else {
+    event.preventDefault();
     alert('do not match ' + passA + ' ' + passB);
     passA.className('invalid');
     passB.className('invalid');
